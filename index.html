@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VipCam • دخول خاص مباشر</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&family=Changa:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Changa', sans-serif;
+    background: radial-gradient(circle at top, #2a0066, #000);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 420px;
+    width: 100%;
+    background: #000;
+}
+
+/* HEADER */
+.header {
+    direction: ltr;
+    background: linear-gradient(90deg, #6a00ff, #b100ff);
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px rgba(255,0,150,0.8),
+        0 0 20px rgba(255,0,150,0.6),
+        0 0 30px rgba(255,0,150,0.4);
+}
+
+.live-now {
+    background: #ff0033;
+    padding: 4px 9px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.viewers {
+    font-size: 11px;
+    margin-top: 3px;
+    font-weight: 700;
+}
+
+/* VIDEO AREA */
+.video {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+/* VIDEO (FOCUS FACE + CHEST) */
+.video video {
+    position: absolute;
+    top: 38%;              /* focus up */
+    left: 50%;
+    width: 130%;           /* zoom */
+    height: 130%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* BLUR SIDES */
+.blur-left,
+.blur-right {
+    position: absolute;
+    top: 0;
+    width: 90px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.blur-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.95), transparent);
+}
+
+.blur-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.95), transparent);
+}
+
+/* overlays */
+.notice {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.72);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 3;
+}
+
+.tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #00ff88;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    z-index: 3;
+}
+
+/* CONTENT */
+.content {
+    padding: 22px;
+    text-align: right;
+}
+
+.title {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: linear-gradient(145deg, #151515, #0a0a0a);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.card:hover {
+    border-color: #777;
+    transform: scale(1.015);
+}
+
+.vip {
+    border: 2px solid #FFD700;
+    background: linear-gradient(145deg, rgba(255,215,0,0.08), rgba(0,0,0,0));
+    transform: scale(1.03);
+}
+
+.badge {
+    background: #FFD700;
+    color: #000;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.vip .price {
+    color: #FFD700;
+}
+
+/* CTA */
+.footer {
+    padding: 16px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, #6a00ff, #ff00cc);
+    padding: 20px;
+    border-radius: 40px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.trust {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo">VipCam</div>
+        <div>
+            <div class="live-now">LIVE NOW</div>
+            <div class="viewers" id="viewers">1,258 watching</div>
+        </div>
+    </div>
+
+    <div class="video" onclick="go()">
+
+        <!-- VIDEO -->
+        <video autoplay muted loop playsinline>
+            <source src="https://gallery0.dditscdn.com/9fc9731a64b517c9ba87dae9012515d418/c99031e91be6f7fb740757407b8f09e7.mp4" type="video/mp4">
+        </video>
+
+        <!-- BLUR -->
+        <div class="blur-left"></div>
+        <div class="blur-right"></div>
+
+        <div class="notice">معاينة • اضغط للدخول</div>
+        <div class="tag">✔ Verified Model</div>
+    </div>
+
+    <div class="content">
+        <div class="title">اختر طريقة الدخول</div>
+
+        <div class="card" onclick="go()">
+            <div style="font-size:10px;color:#aaa;">Standard Access</div>
+            <h3>دخول خاص 7 دقائق</h3>
+            <div class="price">$14.39</div>
+        </div>
+
+        <div class="card vip" onclick="go()">
+            <div class="badge">🔥 VIP موصى به</div>
+            <h3>عرض VIP لمدة 15 دقيقة</h3>
+            <div class="price">$29.69</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://track.topofferzz.com/c?o=21793953&m=23580&a=756344&creativeid=7073668&aff_click_id={replace_it}&sub_aff_id={replace_it}" class="btn">
+            الدخول إلى الغرفة الخاصة 🔒
+        </a>
+        <div class="trust">آمن • خاص • +18</div>
+    </div>
+</div>
+
+<script>
+let viewers = 1258;
+setInterval(() => {
+    viewers += Math.floor(Math.random() * 7) - 3;
+    document.getElementById("viewers").innerText = viewers + " watching";
+}, 3000);
+
+function go() {
+    window.location.href = "https://track.topofferzz.com/c?o=21793953&m=23580&a=756344&creativeid=7073668&aff_click_id={replace_it}&sub_aff_id={replace_it}";
+}
+</script>
+
+</body>
+</html>
