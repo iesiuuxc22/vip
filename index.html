@@ -33,11 +33,19 @@ body {
     align-items: center;
 }
 
+/* ✅ ORIGINAL LOGO (RESTORED) */
 .logo {
     font-family: 'Poppins', sans-serif;
     font-size: 28px;
     font-weight: 900;
     letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+
+    text-shadow:
+        0 0 10px rgba(255,0,150,0.8),
+        0 0 20px rgba(255,0,150,0.6),
+        0 0 30px rgba(255,0,150,0.4);
 }
 
 .live-now {
@@ -68,16 +76,12 @@ body {
     background: #000;
 }
 
-/* ✅ FINAL VIDEO FIX (FACE FOCUS) */
+/* ✅ FACE FOCUS (FINAL WORKING FIX) */
 .video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    /* 🔥 THIS IS THE MAGIC */
-    object-position: center 20%;  /* move focus UP */
-
-    z-index: 1;
+    object-position: center 15%;
 }
 
 /* BLUR SIDES */
@@ -209,7 +213,7 @@ body {
 <div class="container">
 
     <div class="header">
-        <div class="logo">VipCam</div>
+        <div class="logo">VIPCAM</div>
         <div>
             <div class="live-now">LIVE NOW</div>
             <div class="viewers" id="viewers">1,258 watching</div>
